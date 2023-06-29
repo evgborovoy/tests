@@ -1,24 +1,34 @@
 public class Main {
     public static void main(String[] args) {
-        WritingMaterials pen = new WritingMaterials();
-        pen.setName("ручка");
-        pen.setColor("Красный");
-        pen.setLength(11.6);
-        pen.setPrice(167);
-        pen.setDraw(true);
-        pen.display();
-        pen.draw();
-        pen.priceDown(10);
-        pen.display();
-        pen.priceUp(23);
-        pen.display();
-        pen.replaceRod("Синий");
-        pen.draw();
-        System.out.println(pen.getName());
-        System.out.println(pen.getColor());
-        System.out.println(pen.getLength());
-        System.out.println(pen.getPrice());
-        System.out.println(pen.isDraw());
+        Animal duck = new Animal("Утка", "Утя", 3, 5.8, true, true, true);
+        duck.display();
+
+        Bird b = new Bird();
+        b.setName("Bob");
+        b.setArea("На югах");
+        b.setWinterFly(false);
+        b.display();
+//        System.out.println(b.getArea());
+//        System.out.println(b.isWinterFly());
+        b.chirikChirik();
+
+        Fish f = new Fish();
+        f.setName("Сельд");
+        f.setSquama("Крупная");
+        f.setUpStreamSwim(true);
+        f.display();
+//        System.out.println(f.getSquama());
+//        System.out.println(f.isUpStreamSwim());
+        f.bulBul();
+
+        Insect i = new Insect();
+        i.setName("Жук Жукыч");
+        i.setWingCount(4);
+        i.setLikeJesus(true);
+        i.display();
+//        System.out.println(i.getWingCount());
+//        System.out.println(i.isLikeJesus());
+        i.ggggg();
     }
 
 }

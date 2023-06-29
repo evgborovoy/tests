@@ -7,6 +7,8 @@ public class Animal {
     private boolean isWalk;
     private boolean isSwim;
 
+    public Animal (){
+    }
     public Animal(String type, String name) {
         this.type = type;
         this.name = name;
@@ -29,8 +31,7 @@ public class Animal {
     }
 
     public void display() {
-        System.out.println("Тип:" + type + ", Имя: " + name + ", Возраст: " + age + ", Вес: " + weight
-                + ", Умеет летать: " + isFly + ", Умеет ходить: " + isWalk + ", Умеет плавать: " + isSwim + ".");
+        System.out.println("Тип:" + type + ", Имя: " + name + ", Возраст: " + age + ", Вес: " + weight + ", Умеет летать: " + isFly + ", Умеет ходить: " + isWalk + ", Умеет плавать: " + isSwim + ".");
 
     }
 
@@ -38,9 +39,18 @@ public class Animal {
         name = newName;
     }
 
+    public void holiday() {
+        weight += 0.1;
+    }
+
     public void holiday(int days) {
         weight += days * 0.1;
-
+    }
+    public void holiday(double m) {
+        this.weight += m;
+    }
+    public void holiday(double m, int n) {
+        this.weight += m * n;
     }
 
     public String getType() {
