@@ -1,11 +1,20 @@
 public class Animal {
-    private String type;
-    private String name;
-    private int age;
-    private double weight;
-    private boolean isFly;
-    private boolean isWalk;
-    private boolean isSwim;
+    protected String type;
+    protected String name;
+    protected int age;
+    protected double weight;
+    protected boolean isFly;
+    protected boolean isWalk;
+    protected boolean isSwim;
+    private static String description = "Животные. Некоторых едим мы, а кто-то может съесть и нас";
+    static void description(){
+        System.out.println(description);
+    }
+
+    {
+        name = "noName";
+        type = "Animal";
+    }
 
     public Animal (){
     }
@@ -31,7 +40,8 @@ public class Animal {
     }
 
     public void display() {
-        System.out.println("Тип:" + type + ", Имя: " + name + ", Возраст: " + age + ", Вес: " + weight + ", Умеет летать: " + isFly + ", Умеет ходить: " + isWalk + ", Умеет плавать: " + isSwim + ".");
+        System.out.println("Тип:" + type + ", Имя: " + name + ", Возраст: " + age + ", Вес: " + weight
+                + ", Умеет летать: " + isFly + ", Умеет ходить: " + isWalk + ", Умеет плавать: " + isSwim + ".");
 
     }
 

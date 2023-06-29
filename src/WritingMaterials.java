@@ -1,9 +1,9 @@
 public class WritingMaterials {
-    private String name;
-    private String color;
-    private int price;
-    private double length;
-    private boolean isDraw;
+    protected String name;
+    protected String color;
+    protected int price;
+    protected double length;
+    protected boolean draw;
 
     public String getName() {
         return name;
@@ -38,11 +38,11 @@ public class WritingMaterials {
     }
 
     public boolean isDraw() {
-        return isDraw;
+        return draw;
     }
 
     public void setDraw(boolean draw) {
-        isDraw = draw;
+        this.draw = draw;
     }
 
     public WritingMaterials() {
@@ -62,7 +62,7 @@ public class WritingMaterials {
     public WritingMaterials(int price, double length, boolean isDraw) {
         this.price = price;
         this.length = length;
-        this.isDraw = isDraw;
+        this.draw = isDraw;
         this.name = "No name";
         this.color = "No color";
     }
@@ -72,12 +72,12 @@ public class WritingMaterials {
         this.color = color;
         this.price = price;
         this.length = length;
-        this.isDraw = isDraw;
+        this.draw = isDraw;
     }
 
     public void display() {
         System.out.println("Название: " + name + ", Цвет: " + color + ", Длина: " + length + ", Цена: " + price
-                + ", Умеет рисовать: " + isDraw + ".");
+                + ", Умеет рисовать: " + draw + ".");
     }
 
     public void replaceRod(String color) {
@@ -93,9 +93,33 @@ public class WritingMaterials {
     }
 
     public void draw() {
-        if (isDraw) {
-            System.out.println(name + " провёл линию. Её цвет - " + color + ".");
-        }else {
+        if (draw) {
+            System.out.println(name + " провёл линий: 1. Их цвет - " + color + ".");
+        } else {
+            System.out.println(name + " не может ничего рисовать");
+        }
+    }
+
+    public void draw(int n) {
+        if (draw) {
+            System.out.println(name + " провёл линий: " + n + ". Их цвет - " + color + ".");
+        } else {
+            System.out.println(name + " не может ничего рисовать");
+        }
+    }
+
+    public void draw(String color) {
+        if (draw) {
+            System.out.println(name + " провёл линий: 1. Их цвет - " + color + ".");
+        } else {
+            System.out.println(name + " не может ничего рисовать");
+        }
+    }
+
+    public void draw(String color, int n) {
+        if (draw) {
+            System.out.println(name + " провёл линий: " + n + ". Их цвет - " + color + ".");
+        } else {
             System.out.println(name + " не может ничего рисовать");
         }
     }

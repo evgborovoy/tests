@@ -1,6 +1,10 @@
 public class Bird extends Animal {
     private String area;
     private boolean winterFly;
+    {
+        this.name = "noName";
+        this.type = "Bird";
+    }
 
     public Bird() {
         this.setFly(true);

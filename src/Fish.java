@@ -1,6 +1,10 @@
 public class Fish extends Animal {
     private String squama;
     private boolean upStreamSwim;
+    {
+        name = "noName";
+        type = "Fish";
+    }
 
     public Fish() {
         this.setSwimm(true);
